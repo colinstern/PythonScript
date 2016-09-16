@@ -71,6 +71,7 @@ def process(timestamp, values):
     global sumX
     global sumY
     global sumZ
+    global counter
 
 
     sumX += values[0]
@@ -78,12 +79,12 @@ def process(timestamp, values):
     sumZ += values[2]
     counter += 1
  
-    if counter >= 100:
+    if counter >= 10:
+        print(str(sumX/counter) + " " + str(sumY/counter) + " " +  str(sumZ/counter))   
         sumX = 0
         sumY = 0
         sumZ = 0
         counter = 0
-        print(sumX/counter " " + averages[1] + " " +  averages[2])   
        
 #################   Server Connection Code  ####################
 
